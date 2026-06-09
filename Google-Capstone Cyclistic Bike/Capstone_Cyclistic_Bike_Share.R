@@ -1,0 +1,188 @@
+#Installing and Downloading the packages
+install.packages('tidyverse')
+install.packages('janitor')
+install.packages('lubridate')
+library(tidyverse)
+library(janitor)
+library(lubridate)
+
+
+#Collect Data
+getwd() # Get working directory
+setwd("/Users/deeptikavalur") # Set working directory
+
+m01 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m01.csv")
+m02 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m02.csv")
+m03 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m03.csv")
+m04 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m04.csv")
+m05 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m05.csv")
+m06 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m06.csv")
+m07 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m07.csv")
+m08 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m08.csv")
+m09 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m09.csv")
+m10 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m10.csv")
+m11 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m11.csv")
+m12 <- read.csv("/Users/deeptikavalur/Desktop/GOOGLE_DA_PROJECT/m12.csv")
+
+
+#Examine Datasets
+str(m01)
+str(m02)
+str(m03)
+str(m04)
+str(m05)
+str(m06)
+str(m07)
+str(m08)
+str(m09)
+str(m10)
+str(m11)
+str(m12)
+
+
+#Merge Datasets
+cyclistic_data <- bind_rows(m01, m02, m03, m04, m05, m06, m07, m08, m09, m10, m11, m12)
+
+
+#Clean and Transform Data:
+cyclistic_data <- clean_names(cyclistic_data)
+
+cyclistic_data <- cyclistic_data %>%
+  mutate(started_at = ymd_hms(started_at),
+         ended_at = ymd_hms(ended_at))
+
+cyclistic_data <- cyclistic_data %>%
+  mutate(ride_length = as.numeric(difftime(ended_at, started_at, units = "mins")),
+         day_of_week = wday(started_at, label = TRUE))
+
+cyclistic_data <- cyclistic_data %>%
+  filter(!is.na(ride_length) & ride_length > 0)
+
+glimpse(cyclistic_data)
+
+
+
+
+
+
+#ANALYZE & VISUALIZATIONS
+
+#1.Descriptive Analysis:
+
+avg_ride_length <- cyclistic_data %>%
+  group_by(member_casual) %>%
+  summarise(mean_ride_length = mean(ride_length),
+            median_ride_length = median(ride_length),
+            max_ride_length = max(ride_length),
+            min_ride_length = min(ride_length))
+
+print(avg_ride_length)
+
+
+#1.Average Ride Length by Member Type:
+
+ggplot(avg_ride_length, 
+       aes(x = member_casual, 
+           y = mean_ride_length, 
+           fill = member_casual)) +
+  
+  geom_bar(stat = "identity", position = "dodge") +
+  
+  scale_fill_manual(values = c(
+    "casual" = "steelblue",
+    "member" = "pink"
+  )) +
+  
+  labs(title = "Average Ride Length by Member Type",
+       x = "Member Type",
+       y = "Average Ride Length (minutes)") +
+  
+  theme_minimal()
+
+
+
+
+
+#2.Ride Count by Day of the Week
+
+ride_count_by_day <- cyclistic_data %>%
+  group_by(member_casual, day_of_week) %>%
+  summarise(number_of_rides = n(),
+            average_ride_length = mean(ride_length)) %>%
+  arrange(member_casual, day_of_week)
+
+print(ride_count_by_day)
+
+#2.Ride Count by Day of the Week
+
+ggplot(ride_count_by_day, 
+       aes(x = day_of_week, 
+           y = number_of_rides, 
+           fill = member_casual)) +
+  
+  geom_bar(stat = "identity", position = "dodge") +
+  
+  scale_fill_manual(values = c(
+    "casual" = "steelblue",
+    "member" = "pink"
+  )) +
+  
+  labs(title = "Ride Count by Day of the Week",
+       x = "Day of the Week",
+       y = "Number of Rides") +
+  
+  theme_minimal()
+
+
+
+
+#3.Start and End Station Usage
+
+station_usage <- cyclistic_data %>%
+  group_by(member_casual, start_station_name, end_station_name) %>%
+  summarise(number_of_rides = n(),
+            average_ride_length = mean(ride_length)) %>%
+  arrange(desc(number_of_rides))
+
+print(head(station_usage, 20))
+
+#3.Popular Start and End Stations:
+
+top_stations <- station_usage %>% 
+  filter(member_casual %in% c("member", "casual")) %>%
+  group_by(member_casual) %>%
+  top_n(10, number_of_rides)
+
+ggplot(top_stations, 
+       aes(x = reorder(start_station_name, -number_of_rides), 
+           y = number_of_rides, 
+           fill = member_casual)) +
+  
+  geom_bar(stat = "identity", position = "dodge") +
+  
+  scale_fill_manual(values = c(
+    "casual" = "steelblue",
+    "member" = "pink"
+  )) +
+  
+  coord_flip() +
+  
+  labs(title = "Top Start Stations by Member Type",
+       x = "Start Station",
+       y = "Number of Rides") +
+  
+  theme_minimal()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
