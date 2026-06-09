@@ -1,4 +1,4 @@
-# AirBnB-Listing-Anaysis
+# DATA ANALYST PROJECTS
 Airbnb Listing Data Analysis Project
 
 ## INTRODUCTION
