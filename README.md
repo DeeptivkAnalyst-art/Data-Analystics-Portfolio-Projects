@@ -12,7 +12,8 @@
 [GOOGLE DATA ANALYTICS PROFESSIONAL CERTIFICATE: CAPSTONE PROJECT-CASE STUDY-1](https://github.com/DeeptivkAnalyst-art/Data-Analystics-Portfolio-Projects/tree/main/Google-Capstone%20Cyclistic%20Bike)
 
 
-#### 3. 🚖 Uber Rides Data Analysis – Leveraged Python to uncover travel patterns, ride demand trends, and customer behavior insights.[UBER RIDE DATA ANALYSIS](https://github.com/DeeptivkAnalyst-art/Data-Analystics-Portfolio-Projects/tree/main/Uber%20Rides%20Data%20Analysis)
+#### 3. 🚖 Uber Rides Data Analysis – Leveraged Python to uncover travel patterns, ride demand trends, and customer behavior insights.
+[UBER RIDE DATA ANALYSIS](https://github.com/DeeptivkAnalyst-art/Data-Analystics-Portfolio-Projects/tree/main/Uber%20Rides%20Data%20Analysis)
 
 
 #### 4. 🏠 Airbnb Listing Market Analysis – Evaluated pricing, revenue performance, and location-based opportunities using Excel and Tableau.
