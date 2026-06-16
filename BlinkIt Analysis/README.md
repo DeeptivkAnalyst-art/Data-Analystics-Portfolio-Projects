@@ -41,5 +41,8 @@ To conduct a comprehensive analysis of Blinkit's sales performance, customer sat
 	 * Objective: Assess the geographic distribution of sales across different locations.
 
 ###### For more detailed information, refer to the uber.csv file, visualizations, and reports provided in this repository.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](
+www.linkedin.com/in/deeptikavalur)
 	
 
