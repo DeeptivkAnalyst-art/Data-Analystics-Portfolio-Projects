@@ -337,3 +337,7 @@ Regularly review data to assess the impact on membership conversions and make ad
 * Feedback Loop:
 Collect feedback from riders through surveys and social media to continuously improve the bike-share program.
 Use feedback to refine marketing messages, improve station amenities, and enhance the overall rider experience.
+
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](
+www.linkedin.com/in/deeptikavalur)
