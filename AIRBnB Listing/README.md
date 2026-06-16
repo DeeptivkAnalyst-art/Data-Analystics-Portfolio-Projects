@@ -41,6 +41,9 @@ In conclusion, this comprehensive analysis using Tableau provides valuable insig
 
 ###### For more detailed information, visualizations & reports provided in this repository.
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](
+www.linkedin.com/in/deeptikavalur)
+
 
 
 
