@@ -88,3 +88,6 @@ The project includes multiple visualizations such as:
 The Uber Data Analysis and Prediction Project demonstrates the power of data analytics in understanding user behaviour, optimizing operations, and making informed business decisions. Through careful analysis and modelling, valuable insights can be derived to enhance the overall performance and competitiveness of Uber. The project emphasizes the importance of data-driven decision-making and the utilization of advanced tools and techniques for data analysis and prediction.
 
 ###### For more detailed information, refer to the uber.csv file, visualizations, and reports provided in this repository.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](
+www.linkedin.com/in/deeptikavalur)
