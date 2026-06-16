@@ -32,5 +32,9 @@
 ###### For more detailed information, visualizations & reports provided in this repository.
 
 
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="deeptikavalur" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/deeptikavalur?trk=profile-badge">Deepti Kavalur</a></div>
+              
+
+
 
 
