@@ -15,17 +15,21 @@
 #### 3. 🚖 Uber Rides Data Analysis – Leveraged Python to uncover travel patterns, ride demand trends, and customer behavior insights.
 [UBER RIDE DATA ANALYSIS](https://github.com/DeeptivkAnalyst-art/Data-Analystics-Portfolio-Projects/tree/main/Uber%20Rides%20Data%20Analysis)
 
+#### 4. ☕ Coffee Shop Sales Analysis – data analysis, data modeling, DAX calculations, time intelligence, and interactive dashboard development using Microsoft Power BI.
+[Coffee Shop Sales Analysis Dashboard](https://github.com/DeeptivkAnalyst-art/Coffee-Shop-Sales-Analysis/blob/main/README.md)
 
-#### 4. 🏠 Airbnb Listing Market Analysis – Evaluated pricing, revenue performance, and location-based opportunities using Excel and Tableau.
+#### 5. 🏠 Airbnb Listing Market Analysis – Evaluated pricing, revenue performance, and location-based opportunities using Excel and Tableau.
 [Airbnb Listing Data Analysis](https://github.com/DeeptivkAnalyst-art/Data-Analystics-Portfolio-Projects/tree/main/AIRBnB%20Listing)
 
 
-#### 5. 📉 Global Layoffs Data Analysis – Explored worldwide layoff trends, company impacts, and workforce reductions through SQL analysis and Tableau dashboards.
+#### 6. 📉 Global Layoffs Data Analysis – Explored worldwide layoff trends, company impacts, and workforce reductions through SQL analysis and Tableau dashboards.
 [LAYOFFS GLOBAL DATA ANALYSIS](https://github.com/DeeptivkAnalyst-art/Data-Analystics-Portfolio-Projects/tree/main/Layoffs%20Global%20Data%20Analysis)
 
 
-#### 6. 🛒 Blinkit Sales & Outlet Performance Analysis – Analyzed sales, customer ratings, and inventory distribution to identify key business drivers using Python.
+#### 7. 🛒 Blinkit Sales & Outlet Performance Analysis – Analyzed sales, customer ratings, and inventory distribution to identify key business drivers using Python.
 [BLINK-IT ANALYSIS](https://github.com/DeeptivkAnalyst-art/Data-Analystics-Portfolio-Projects/tree/main/BlinkIt%20Analysis)
+
+
 
 ### Each project follows a structured analytics workflow involving data collection, cleaning, transformation, analysis, visualization, and insight generation to support data-driven decision-making and business strategy.
 
